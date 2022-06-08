@@ -25,7 +25,7 @@ streamlit.dataframe(fruits_to_show)
 
 
 def get_fruityvice_datat(this_fruit_choice):
-  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
   fruit_normal = pandas.json_normalize(fruityvice_response.json())
   return fruit_normal
 
