@@ -4,6 +4,11 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
+option = streamlit.selectbox(
+     'How would you like to be contacted?',
+     ('Email', 'Home phone', 'Mobile phone'))
+
+streamlit.write('You selected:', option)
 streamlit.title('My Parents New Healthy Diner')
 
 streamlit.header('Breakfast Favourites')
